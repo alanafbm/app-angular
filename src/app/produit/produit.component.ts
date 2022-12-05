@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Produit } from '../produit';
 
 @Component({
   selector: 'app-produit',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./produit.component.scss']
 })
 export class ProduitComponent {
+  @Input() produit:Produit;
+  @Input() estEditable:Boolean;
 
+
+
+  constructor(){}
+
+  changeEditable(){
+    this.estEditable = !this.estEditable;
+  }
+
+  
 }

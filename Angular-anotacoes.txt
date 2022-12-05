@@ -1,0 +1,24 @@
+# npm install -g @angular/cli (instalaçao)
+
+# ng version (verifica se foi instalado)
+
+# ng new app-produit (cria um novo)
+
+# ng serve (cria o navegador)
+
+# ng serve -o (vai abrir automaticamente o navegador)
+
+# ng generate component accueil (cria um component(pasta) com 4 arquivos dentro(html, scss, ts e ts)
+
+- src/app/app-routing module é onde vamos criar as rotas
+
+- app.component.html (la eu só vou adicionar os components que foram criados usando sempre o prefixo app-nomedocomponent)
+
+- ao inves de usar href usamos routerLink para que ele nao recharge tudo a cada mudanca de link...e simplesmente produz um single page
+- ngOnInit: é carregado na inicialização de um componente. é praticamente a mesma coisa que o constructor (mas angular diz pra usar no ngoninit)
+e deixar o constructor apenas para inicializar variaveis.
+
+- entramos no fichier tsconfig.json e adicionamos a seguinte linha: "strictPropertyInitialization" : false 
+essa linha vai fazer com que nos nao tenhamos problemas no typescript quando nao iniciarmos uma variavel. linha para evitar problemas.
+
+- dans app.module ele adicionou o forms module
