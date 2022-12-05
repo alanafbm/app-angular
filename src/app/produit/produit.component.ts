@@ -8,7 +8,7 @@ import { Produit } from '../produit';
 })
 export class ProduitComponent {
   @Input() produit:Produit;
-  @Input() estEditable:Boolean;
+  @Input() estEditable:Boolean = false;
 
 
 

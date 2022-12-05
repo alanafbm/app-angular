@@ -1,7 +1,7 @@
 <h1>Mes produits que ne sont pas de bières...</h1>
 <p>{{salutation}}</p>
 
-Est editable<input type="checkbox" [(ngModel)] = "estEditable">
+Est editable<input type="checkbox" (click)="rendreEditable()">
 
 <app-produit *ngFor="let unProduit of produit" [produit]="unProduit" [estEditable]="estEditable"></app-produit>
 

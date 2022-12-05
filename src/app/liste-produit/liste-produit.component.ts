@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConnecterService } from '../connecter.service';
 import { Produit } from '../produit';
 
 @Component({
@@ -13,7 +14,8 @@ export class ListeProduitComponent {
     produit:Produit[] = [];
     // produit:Array<Object>;
 
-    constructor(){
+    constructor( private servConnecter:ConnecterService){
+
     }
 
     ngOnInit():void{
@@ -31,5 +33,12 @@ export class ListeProduitComponent {
       })
       // console.log(this.produit);
       
+    }
+    rendreEditable(){
+      if(this.servConnecter.getEtatConnexion()){
+        this.estEditable = !this.estEditable;
+      }else{
+        this.estEditable = false;
+      }
     }
 }
