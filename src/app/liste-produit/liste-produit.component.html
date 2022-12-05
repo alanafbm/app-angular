@@ -1,0 +1,20 @@
+<h1>Mes produits que ne sont pas de bières...</h1>
+<p>{{salutation}}</p>
+
+Est editable<input type="checkbox" [(ngModel)] = "estEditable">
+
+<article *ngFor="let unProduit of produit">
+    Est editable<input type="checkbox" [(ngModel)] = "unProduit.editable">
+    <ng-container *ngIf="estEditable || unProduit.editable">
+       Nom: <input [(ngModel)] = unProduit.nom>
+       Prix:  <input [(ngModel)] = unProduit.prix>
+    </ng-container>
+    <ng-container *ngIf="!estEditable && !unProduit.editable">
+        <span>{{unProduit.nom}}</span>
+        <span>{{unProduit.prix}}</span>
+    </ng-container>
+    <!-- <input value="{{unProduit.prix}}"> -->
+    <!-- <input [(ngModel)] = unProduit.prix>
+    <span *ngIf="unProduit.prix < 50">Rabais</span> -->
+</article>
+
